@@ -23,10 +23,9 @@
   </head>
   <body>
     <?php
-      // Conexão
-      // require('./sql/db.class.php');
-      // require('./sql/login.class.php');
-      require_once './sql/class/login.class.php';
+    // Verificar login
+    
+    require_once ('./sql/scripts/verifyLoggin.php');
       // Navbar
       require('./template-parts/nav.php');
     ?>
@@ -41,15 +40,15 @@
             <div class="col s12 m12 l12 mt-4">
               <div class="input-field outlined">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="email" type="email" class="validate" placeholder=" ">
-                <label class="active" for="email">RM</label>
+                <input id="rm" type="number" name="rm" class="validate" placeholder=" ">
+                <label class="active" for="rm">RM</label>
               </div>
             </div>
             <div class="col s12 m12 l12">
               <div class="input-field outlined">
                 <span class="material-icons prefix">key</span>
-                <input id="email" type="password" class="validate" placeholder=" ">
-                <label class="" for="email">Senha</label>
+                <input id="senha" type="password" name="senha" class="validate" placeholder=" ">
+                <label class="" for="senha">Senha</label>
               </div>
             </div>
             <div class="col s12 m12 l3">

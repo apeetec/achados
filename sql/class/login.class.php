@@ -15,29 +15,25 @@ class Login
      * @param string $password (senha em texto plano para verificação)
      * @return bool true se login ok, false se falhou
      */
-    public function authenticate(string $username, string $password): bool
+    public function authenticate(string $rm, string $senha): bool
     {
-        // Consulta preparada para evitar SQL Injection
-        $stmt = $this->connection->prepare('SELECT password FROM alunos WHERE username = :username LIMIT 1');
-        $stmt->execute(['username' => $username]);
-        $user = $stmt->fetch();
+    $stmt = $this->connection->prepare('SELECT id, senha FROM alunos WHERE rm = :rm LIMIT 1');
+    $stmt->execute(['rm' => $rm]);
+    $user = $stmt->fetch();
 
-        if ($user && password_verify($password, $user['password'])) {
-        // Inicia a sessão, se ainda não estiver iniciada
-            if (session_status() !== PHP_SESSION_ACTIVE) {
-                session_start();
-            }
-
-            // Armazena dados na sessão
-            $_SESSION['usuario_id'] = $user['id'];
-            $_SESSION['username']   = $username;
-
-            return true;
+    // if ($user && password_verify($senha, $user['senha'])) {
+    if ($user && $senha === $user['senha']) {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
         }
+        $_SESSION['rm'] = $rm;
 
-        // Login falhou
-        return false;
+        return true;
     }
+
+    return false;
+}
+
 
     /**
      * Você pode implementar outros métodos como logout, verificar sessão, etc.
