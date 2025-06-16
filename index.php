@@ -23,9 +23,8 @@
   </head>
   <body>
     <?php
-    // Verificar login
-    
-    require_once ('./sql/scripts/verifyLoggin.php');
+    // Verificar quem está logado
+      require_once ('./sql/scripts/verifyLoggin.php');
       // Navbar
       require('./template-parts/nav.php');
     ?>
