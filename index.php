@@ -39,14 +39,14 @@
             <div class="col s12 m12 l12 mt-4">
               <div class="input-field outlined">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="rm" type="number" name="rm" class="validate" placeholder=" ">
+                <input id="rm" type="number" name="rm" class="validate" required placeholder=" ">
                 <label class="active" for="rm">RM</label>
               </div>
             </div>
             <div class="col s12 m12 l12">
               <div class="input-field outlined">
                 <span class="material-icons prefix">key</span>
-                <input id="senha" type="password" name="senha" class="validate" placeholder=" ">
+                <input id="senha" type="password" name="senha" class="validate" required placeholder=" ">
                 <label class="" for="senha">Senha</label>
               </div>
             </div>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col s12 m12 l4">
                   <button class="btn icon-right waves-effect waves-light signup center-align" type="submit" name="action">
-                    Cadastra-se
+                    Cadastre-se
                   </button>
                 </div>
               </div>
