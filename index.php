@@ -24,7 +24,7 @@
   <body>
     <?php
     // Verificar quem está logado
-      require_once ('./sql/scripts/verifyLoggin.php');
+      // require_once ('./sql/scripts/verifyLoggin.php');
       // Navbar
       require('./template-parts/nav.php');
     ?>
@@ -50,14 +50,27 @@
                 <label class="" for="senha">Senha</label>
               </div>
             </div>
-            <div class="col s12 m12 l3">
-              <input class="btn icon-right waves-effect waves-light acess center-align valign-wrapper" type="submit" value="Acessar">
+            <div class="col s12 m12 l12">
+              <div class="row g-1">
+                <div class="col s12 m12 l4">
+                  <input class="btn icon-right waves-effect waves-light acess center-align" type="submit" value="Acessar">
+                </div>
+                <div class="col s12 m12 l4">
+                  <button class="btn icon-right waves-effect waves-light forgot center-align" type="submit" name="action">
+                    Esqueci minha senha
+                  </button>
+                </div>
+                <div class="col s12 m12 l4">
+                  <button class="btn icon-right waves-effect waves-light signup center-align" type="submit" name="action">
+                    Cadastra-se
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="col s12 m12 l4">
-              <button class="btn icon-right waves-effect waves-light forgot valign-wrapper center-align" type="submit" name="action">
-                Esqueci minha senha
-              </button>
-            </div>
+
+
+
+
           </form>
         </section>
       </article>

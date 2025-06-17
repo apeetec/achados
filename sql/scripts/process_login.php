@@ -20,7 +20,7 @@ if ($login->authenticate($username, $password)) {
     echo "Bem-vindo, " . htmlspecialchars($username) . "!";
 
     // Redirecione para uma área protegida, se quiser:
-    // header("Location: dashboard.php");
+    // header("Location: /achados/pages/dashboard.php");
     // exit;
 } else {
     echo "Usuário ou senha inválidos.";
