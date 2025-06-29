@@ -3,6 +3,7 @@
 include $_SERVER['DOCUMENT_ROOT'] . '/achados/sql/scripts/verifyLoggin.php';
 // Funções de ajudas rápidas
 include $_SERVER['DOCUMENT_ROOT'] . '/achados/sql/helpers.php';
+// Função para chamar o Head com as estilizações e outras metatags
 require $_SERVER['DOCUMENT_ROOT'] . '/achados/template-parts/header.php';
 ?>
   <body>
