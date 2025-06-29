@@ -1,32 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Gabriel Batista">
-    <!-- Descrição -->
-    <meta name="description" content="">
-    <!-- Titulo -->
-    <title></title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="">
-    <!-- CSS Gabriel -->
-    <link href="./css/style.css" type="text/css" rel="stylesheet">
-    <link href="./css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <!-- Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  </head>
+<?php
+// Função para verificar se o usuário está logado
+include $_SERVER['DOCUMENT_ROOT'] . '/achados/sql/scripts/verifyLoggin.php';
+// Funções de ajudas rápidas
+include $_SERVER['DOCUMENT_ROOT'] . '/achados/sql/helpers.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/achados/template-parts/header.php';
+?>
   <body>
     <?php
-    // Verificar quem está logado
-      // require_once ('./sql/scripts/verifyLoggin.php');
       // Navbar
-      require('./template-parts/nav.php');
+      echo navbar();
     ?>
     <main>     
       <div class="parallax-container">
@@ -67,16 +49,14 @@
                 </div>
               </div>
             </div>
-
-
-
-
           </form>
         </section>
       </article>
     </main>
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="./js/materialize.min.js"></script>
-    <script type="text/javascript" src="./js/custom-scripts/scripts.js"></script>
+    <footer>
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="<?php echo $path; ?>js/materialize.min.js"></script>
+      <script type="text/javascript" src="<?php echo $path; ?>js/custom-scripts/scripts.js"></script>
+    </footer>
   </body>
 </html>
