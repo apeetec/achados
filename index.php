@@ -1,19 +1,25 @@
 <?php
 // Função para verificar se o usuário está logado
-include $_SERVER['DOCUMENT_ROOT'] . '/achados/sql/scripts/verifyLoggin.php';
+// include __DIR__ . '/sql/scripts/verifyLoggin.php';
+// include $_SERVER['DOCUMENT_ROOT'] . '/achados/sql/scripts/verifyLoggin.php';
+
 // Funções de ajudas rápidas
-include $_SERVER['DOCUMENT_ROOT'] . '/achados/sql/helpers.php';
+include __DIR__ . '/sql/helpers.php';
+
+// include $_SERVER['DOCUMENT_ROOT'] . '/achados/sql/helpers.php';
+
 // Função para chamar o Head com as estilizações e outras metatags
-require $_SERVER['DOCUMENT_ROOT'] . '/achados/template-parts/header.php';
+// require __DIR__ . '/template-parts/header.php';
+// require $_SERVER['DOCUMENT_ROOT'] . '/achados/template-parts/header.php';
 ?>
-  <body>
+  
     <?php
       // Navbar
       echo navbar();
     ?>
     <main>     
       <div class="parallax-container">
-        <div class="parallax"><img src="img/test1.jpg"></div>
+        <div class="parallax"><img src="<?php echo $path;?>img/test1.jpg"></div>
       </div>
       <article class="container">
         <section class="login mt-6 mb-6">
@@ -54,10 +60,6 @@ require $_SERVER['DOCUMENT_ROOT'] . '/achados/template-parts/header.php';
         </section>
       </article>
     </main>
-    <footer>
-      <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="<?php echo $path; ?>js/materialize.min.js"></script>
-      <script type="text/javascript" src="<?php echo $path; ?>js/custom-scripts/scripts.js"></script>
-    </footer>
-  </body>
-</html>
+<?php
+echo footer();
+?>

@@ -11,8 +11,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="">
     <!-- CSS Gabriel -->
-    <link href="<?php echo $path; ?>/css/style.css" type="text/css" rel="stylesheet">
-    <link href="<?php echo $path; ?>/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="<?php echo $path; ?>css/style.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo $path; ?>css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -21,3 +21,4 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
+  <body>

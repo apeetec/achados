@@ -1,7 +1,6 @@
 <?php
-
-include $_SERVER['DOCUMENT_ROOT'] . '/achados/sql/helpers.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/achados/template-parts/header.php';
+// include $_SERVER['DOCUMENT_ROOT'] . '/achados/sql/helpers.php';
+include __DIR__ . '/../sql/helpers.php';
 // Navbar
 navbar();
 ?>
