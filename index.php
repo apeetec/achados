@@ -45,12 +45,12 @@ include __DIR__ . '/sql/helpers.php';
                   <input class="btn icon-right waves-effect waves-light acess center-align" type="submit" value="Acessar">
                 </div>
                 <div class="col s12 m12 l4">
-                  <button class="btn icon-right waves-effect waves-light forgot center-align" type="submit" name="action">
+                  <button class="btn icon-right waves-effect waves-light forgot center-align">
                     Esqueci minha senha
                   </button>
                 </div>
                 <div class="col s12 m12 l4">
-                  <button class="btn icon-right waves-effect waves-light signup center-align" type="submit" name="action">
+                  <button class="btn icon-right waves-effect waves-light signup center-align">
                     Cadastre-se
                   </button>
                 </div>

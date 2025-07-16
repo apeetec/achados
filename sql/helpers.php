@@ -45,6 +45,17 @@ function footer(){
 }
 // Função de navbar
 function navbar(){
-    require $_SERVER['DOCUMENT_ROOT'] . '/achados/template-parts/nav.php';
+    // require $_SERVER['DOCUMENT_ROOT'] . '/achados/template-parts/nav.php';
+    require __DIR__ . '/../template-parts/nav.php';
 }
+// Função para verificar a quantidade de erros ao tentar o login
+function verifyLoginErrors(){
+if (isset($_GET['erro']) && $_GET['erro'] == 'excedido'):
+$_SESSION['tentativas'] = 'excedido';
+    if($_SESSION['tentativas'] == 'excedido'):
+        return 'Limite excedido';
+    endif;
+endif;
+}
+
 ?>

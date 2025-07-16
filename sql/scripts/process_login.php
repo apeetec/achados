@@ -13,20 +13,24 @@ $login = new Login();
 $username = $_POST['rm'] ?? '';
 $password = $_POST['senha'] ?? '';
 
+// Inicia variáveis de sessão se não existirem
+if (!isset($_SESSION['tentativas'])) $_SESSION['tentativas'] = 0;
+
+if ($_SESSION['tentativas'] >= 3) {
+    header("Location: /achados/index.php?erro=excedido");
+    exit;
+}
+
 if ($login->authenticate($username, $password)) {
     // Login bem-sucedido - salva dados na sessão
     $_SESSION['rm'] = $username;
-
-    echo "Bem-vindo, " . htmlspecialchars($username) . "!";
-
-    // Redirecione para uma área protegida, se quiser:
-    // header("Location: /achados/pages/dashboard.php");
-    // exit;
+    // Zera tentativas ao logar com sucesso
+    $_SESSION['tentativas'] = 0;
+    header("Location: /achados/pages/dashboard.php");
+    exit;
 } else {
-    echo "Usuário ou senha inválidos.";
-
-    // Você pode redirecionar de volta ao formulário de login com mensagem:
-    // header("Location: login.php?erro=1");
-    // exit;
+    $_SESSION['tentativas']++;
+    header("Location: /achados/index.php?erro=1");
+    exit;
 }
 ?>
