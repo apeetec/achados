@@ -15,3 +15,7 @@ nav{background-color: var(--green-dark)!important;}
 .login .forgot{justify-content: center;background-color: var(--white-soft);color: var(--black-dark);}
 .login .btn{width: 100%;text-align: center;display: inline-block;}
 .login .signup{background-color: var(--white-soft);color: var(--black-dark);}
+/* Dashboard */
+.dashboard{padding-left: 300px;}
+.control{padding: 2rem;display: grid;grid-gap: 3rem;}
+.filters{display: grid;grid-template-columns: repeat(3,1fr);grid-gap: 1rem;}

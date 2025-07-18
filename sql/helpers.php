@@ -18,6 +18,7 @@ function verifyLogin(){
         // exit;
     }
 }
+// verifyLogin();
 // Função para checar se está logado, futuramente vou adicionar verificação de função
 function checkLoged(){
    if (session_status() === PHP_SESSION_NONE) {

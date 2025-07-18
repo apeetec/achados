@@ -1,0 +1,13 @@
+<?php
+// Conexão com o banco
+require_once __DIR__ . '/../class/db.class.php';
+// Classe de Usuários
+require_once __DIR__ . '/../class/users.class.php';
+$usuarioRepo = new Usuarios();
+$usuarios = $usuarioRepo->buscarTodosUsuarios();
+
+foreach ($usuarios as $usuario) {
+    echo "ID: {$usuario['id']} | Nome: {$usuario['rm']} | Nome: {$usuario['nome']} | Email: {$usuario['email']}<br>";
+}
+
+?>
