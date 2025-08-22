@@ -17,5 +17,16 @@ nav{background-color: var(--green-dark)!important;}
 .login .signup{background-color: var(--white-soft);color: var(--black-dark);}
 /* Dashboard */
 .dashboard{padding-left: 300px;}
-.control{padding: 2rem;display: grid;grid-gap: 3rem;}
+.control{display: grid;grid-gap: 3rem;}
+.control .col{padding: 2rem;}
 .filters{display: grid;grid-template-columns: repeat(3,1fr);grid-gap: 1rem;}
+.delete{background-color: #d50000;border: none;box-shadow: none;color: #fcfffc;padding: 10px;margin: 0 5px;}
+.update{background-color: #1b5e20;border: none;box-shadow: none;color: #fcfffc;padding: 10px;margin: 0 5px;}
+.controle .tabs{display: flex;flex-direction: column;overflow-x: hidden;padding: 0 1rem;}
+.controle .tabs li > a.active{background-color: #1b5e20!important;color: #fcfffc!important;}
+.controle .tabs li > a{margin: 0;}
+#guia-alunos{display: grid;grid-gap: 1rem 0;grid-template-rows: auto 1fr;}
+.tabs .indicator{display: none;}
+.control .carousel{height: 100dvh;}
+.alunos{height: 100%;overflow-y: auto;padding-bottom: 1rem;}
+.tabs .tab a{align-items: flex-start;}

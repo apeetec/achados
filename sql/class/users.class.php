@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../class/db.class.php';
 class Usuarios
 {
     private PDO $pdo;
