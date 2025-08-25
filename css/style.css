@@ -24,7 +24,8 @@ nav{background-color: var(--green-dark)!important;}
 .update{background-color: #1b5e20;border: none;box-shadow: none;color: #fcfffc;padding: 10px;margin: 0 5px;}
 .controle .tabs{display: flex;flex-direction: column;overflow-x: hidden;padding: 0 1rem;}
 .controle .tabs li > a.active{background-color: #1b5e20!important;color: #fcfffc!important;}
-.controle .tabs li > a{margin: 0;}
+.controle .tabs li > a{margin: 0;display: inline-block;text-align: left;font-size: 18px;}
+.controle .tabs li > a i {font-size: 20px;}
 #guia-alunos{display: grid;grid-gap: 1rem 0;grid-template-rows: auto 1fr;}
 .tabs .indicator{display: none;}
 .control .carousel{height: 100dvh;}

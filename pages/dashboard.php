@@ -44,7 +44,7 @@ include __DIR__ . '/../sql/helpers.php';
         </a>
     </div>
     <ul id="controle-de-guias" class="tabs">
-        <li class="tab col s3"><a class="active" href="#guia-alunos">Alunos</a></li>
+        <li class="tab col s3"><a class="active" href="#guia-alunos"><i class="fa-solid fa-users"></i>&nbsp;&nbsp;&nbsp;Alunos</a></li>
         <li class="tab col s3"><a href="#test-swipe-2">Test 2</a></li>
         <li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
     </ul>
