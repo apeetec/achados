@@ -15,6 +15,9 @@ nav{background-color: var(--green-dark)!important;}
 .login .forgot{justify-content: center;background-color: var(--white-soft);color: var(--black-dark);}
 .login .btn{width: 100%;text-align: center;display: inline-block;}
 .login .signup{background-color: var(--white-soft);color: var(--black-dark);}
+/* Cadastro */
+.register{max-width: 420px;margin: 40px auto;}
+.register .btn-large{width: 100%;justify-content: center;border: none!important;outline: none;}
 /* Dashboard */
 .dashboard{padding-left: 300px;}
 .control{display: grid;grid-gap: 3rem;}
