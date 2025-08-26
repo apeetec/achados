@@ -6,7 +6,7 @@ echo navbar();
 <main>
     <div class="container">
         
-        <form class="row g-1 register">
+        <form action="" method="post" class="row g-1 register">
             <div class="s12 m12 l12 input-field outlined">
                 <div class="prefix"><i class="fa-solid fa-user"></i></div>
                 <input id="first_name" type="text" placeholder=" " maxlength="20" required="true"/>
