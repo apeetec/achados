@@ -1,6 +1,6 @@
 <?php
 include __DIR__ . '/../sql/helpers.php';
-// verifyLogin();
+verifyLogin();
 // Navbar
 // navbar();
 ?>

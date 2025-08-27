@@ -1,5 +1,5 @@
 <?php
-// Inicia a sessão
+// Inicia a sessão (se ainda não foi iniciada pela classe, não tem problema)
 session_start();
 
 // Conexão com o banco
@@ -13,24 +13,18 @@ $login = new Login();
 $username = $_POST['rm'] ?? '';
 $password = $_POST['senha'] ?? '';
 
-// Inicia variáveis de sessão se não existirem
-if (!isset($_SESSION['tentativas'])) $_SESSION['tentativas'] = 0;
-
-if ($_SESSION['tentativas'] >= 3) {
-    header("Location: /achados/index.php?erro=excedido");
-    exit;
-}
-
+// Tenta autenticar
 if ($login->authenticate($username, $password)) {
-    // Login bem-sucedido - salva dados na sessão
-    $_SESSION['rm'] = $username;
-    // Zera tentativas ao logar com sucesso
-    $_SESSION['tentativas'] = 0;
+    // Login bem-sucedido - já tem dados na sessão
     header("Location: /achados/pages/dashboard.php");
     exit;
 } else {
+    // Se quiser controlar tentativas, pode manter esse bloco
+    if (!isset($_SESSION['tentativas'])) {
+        $_SESSION['tentativas'] = 0;
+    }
     $_SESSION['tentativas']++;
+    
     header("Location: /achados/index.php?erro=1");
     exit;
 }
-?>

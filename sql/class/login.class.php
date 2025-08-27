@@ -11,18 +11,17 @@ class Login
 
     /**
      * Tenta autenticar o usuário pelo username e senha
-     * @param string $username
-     * @param string $password (senha em texto plano para verificação)
+     * @param string $rm
+     * @param string $senha (senha em texto plano para verificação)
      * @return bool true se login ok, false se falhou
      */
     public function authenticate(string $rm, string $senha): bool
     {
-    $stmt = $this->connection->prepare('SELECT id, senha FROM alunos WHERE rm = :rm LIMIT 1');
-    $stmt->execute(['rm' => $rm]);
+    $stmt = $this->connection->prepare('SELECT id, senha FROM alunos WHERE rm = :rm AND status_aluno = :ativado LIMIT 1');
+    $stmt->execute(['rm' => $rm, ':ativado' => 'ativo']);
     $user = $stmt->fetch();
 
-    // if ($user && password_verify($senha, $user['senha'])) {
-    if ($user && $senha === $user['senha']) {
+    if ($user && password_verify($senha, $user['senha'])) {
         if (session_status() !== PHP_SESSION_ACTIVE) {
             session_start();
         }

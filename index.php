@@ -1,8 +1,8 @@
 <?php
+// Include para funções de atalhos rápidos
+include __DIR__ . '/sql/helpers.php';
 // Função para verificar se o usuário está logado
 // verifyLogin();
-// Funções de ajudas rápidas
-include __DIR__ . '/sql/helpers.php';
 // Função para chamar o Head com as estilizações e outras metatags
 // require __DIR__ . '/template-parts/header.php';
 // require $_SERVER['DOCUMENT_ROOT'] . '/achados/template-parts/header.php';
